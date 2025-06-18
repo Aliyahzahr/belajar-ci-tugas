@@ -35,6 +35,9 @@ $routes->get('get-location', 'TransaksiController::getLocation', ['filter' => 'a
 $routes->get('get-cost', 'TransaksiController::getCost', ['filter' => 'auth']);
 
 $routes->get('keranjang', 'TransaksiController::index', ['filter' => 'auth']);
-$routes->get('faq', 'FaqController::index', ['filter' => 'auth']);
+
 $routes->get('profile', 'Home::profile', ['filter' => 'auth']);
+$routes->get('faq', 'FaqController::index', ['filter' => 'auth']);
 $routes->get('contact', 'Home::contact', ['filter' => 'auth']);
+
+$routes->resource('api', ['controller' => 'apiController']);
