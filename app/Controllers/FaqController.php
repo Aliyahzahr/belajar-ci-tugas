@@ -2,12 +2,9 @@
 
 namespace App\Controllers;
 
-use App\Controllers\BaseController;
-use CodeIgniter\HTTP\ResponseInterface;
-
 class FaqController extends BaseController
 {
-    public function index()
+    public function index(): string
     {
         return view('v_faq');
     }

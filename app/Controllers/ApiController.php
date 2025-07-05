@@ -5,7 +5,7 @@ namespace App\Controllers;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\RESTful\ResourceController;
 
-use App\Models\ProductModel;
+use App\Models\UserModel;
 use App\Models\TransactionModel;
 use App\Models\TransactionDetailModel;
 
@@ -15,14 +15,15 @@ class ApiController extends ResourceController
     protected $user;
     protected $transaction;
     protected $transaction_detail;
-
-    function __construct()
+    
+    public function __construct()
     {
-        $this->apiKey = env ('API_KEY');
+        $this->apiKey = env('API_KEY'); // Contoh: fNqM2Iw4183c28482a1f26a7CCol0IkT
         $this->user = new UserModel();
         $this->transaction = new TransactionModel();
         $this->transaction_detail = new TransactionDetailModel();
     }
+
     /**
      * Return an array of resource objects, themselves in array format.
      *

@@ -23,7 +23,7 @@ class Redirect implements FilterInterface
 
             // Redirect berdasarkan role
             if ($role === 'admin') {
-                return redirect()->to('/faq');
+                return redirect()->to('/produk');
             } elseif ($role === 'user') {
                 return redirect()->to('/');
             }
